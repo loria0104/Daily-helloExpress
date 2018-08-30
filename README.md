@@ -22,6 +22,7 @@ npm install --save markdown
 新建文件（app.js）
 
 <br/>第三方模块插件说明<br/>
+| 第三方模块  | 说明 |
 | ---------- | -------------------- |
 | bodyParser | 解析post请求数据 |
 | cookies    | 读/写cookie        |
@@ -30,7 +31,7 @@ npm install --save markdown
 | markdown   | markdown语法解析模块 |
 
 <br/>目录结构说明<br/>
-
+| 目录结构| 说明|
 | ------ | ------------- | ----------------------------------- |
 | folder | db            | 数据库存储目录               |
 |        | models        | 数据库模型文件目录         |
