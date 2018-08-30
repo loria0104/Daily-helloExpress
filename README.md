@@ -22,9 +22,8 @@ npm install --save markdown
 新建文件（app.js）
 
 <br/>第三方模块插件说明<br/>
-
-| bodyParser | 解析post请求数据 |
 | ---------- | -------------------- |
+| bodyParser | 解析post请求数据 |
 | cookies    | 读/写cookie        |
 | swig       | 模板解析引擎   |
 | mongoose   | 操作mongodb数据  |
@@ -32,8 +31,8 @@ npm install --save markdown
 
 <br/>目录结构说明<br/>
 
-| folder | db            | 数据库存储目录               |
 | ------ | ------------- | ----------------------------------- |
+| folder | db            | 数据库存储目录               |
 |        | models        | 数据库模型文件目录         |
 |        | node_modules  |  node第三方模块目录          |
 |        | public        | 公共文件目录（js、css、images...）  |
