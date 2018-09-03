@@ -46,7 +46,7 @@ npm install --save markdown
 
 # 二.应用创建
 #### 1.创建应用，监听端口(编辑app.js)
-```
+```JavaScript
 //1.1.1 加载express模块
 
 var express = require("express");
@@ -65,7 +65,7 @@ console.log("加载成功");
 ```
 
 #### 2.绑定路由(编辑app.js)
-```
+```JavaScript
 //路由绑定
 
 app.get('/',function(req,res,next){
@@ -89,33 +89,33 @@ next：方法，用于执行下一个和路径匹配的函数
 # 三.使用模板
 #### 1.加载模板处理模块
 模板作用：实现后端逻辑和页面表现分离，即前后端分离
-```
+```JavaScript
 var swig = require('swig');
 ```
 
 #### 2.定义当前应用所使用的模板引擎
-```
+```JavaScript
 app.engine('html',swig.renderFile);
 //第一个参数表示模板引擎名称，同时也是模板文件的后缀
 //第二个参数表示用于解析处理模板内容的方法
 ```
 
 #### 3.设置模板文件存放的目录
-```
+```JavaScript
 app.set('views','./views');
 //第一个参数不能变更必须是views
 //第二个参数表示路径（目录），当前文件夹路径（同目录）下的子文件夹views
 ```
 
 #### 4.注册所使用的模板引擎，即将刚才定义的模板引擎配置到app应用当中
-```
+```JavaScript
 app.set('view engine','html');
 //第一个参数不能变更必须为view engine
 //第二个参数和app.engine方法中定义的模板引擎名称（第一个参数）一致
 ```
 
 #### 5.读取views目录下的指定文件，解析并返回给客户端。
-```
+```JavaScript
 res.render('index')
 swig.setDefaults({cache:false});
 //第一个参数表示模板的文件，相对于views目录，解析views/index.html
@@ -172,7 +172,7 @@ net stop mongodb
 
 （3）在应用启动入口app.js中添加代码段，通过mongoose.connect方法连接数据库
 
-```
+```JavaScript
 
 mongoose.connect('mongodb://localhost:27019/nodeweb2',function(err) {
 
@@ -197,7 +197,7 @@ console.log('数据库连接成功');
 # 五.表结构schema定义，model创建
 #### 1.表结构schema定义
 在schema目录下的user.js文件中输入如下代码段
-```
+```JavaScript
 //加载模块
 
 var mongoose = require('mongoose');
@@ -222,7 +222,7 @@ module.exports =new mongoose.Schema({
 
 #### 2.model创建
 在models目录下新建User.js
-```
+```JavaScript
 //加载模块
 
 var mongoose = require('mongoose');
